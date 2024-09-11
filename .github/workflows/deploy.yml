@@ -1,6 +1,5 @@
 name: Push to PWS
 
-
 on:
   push:
     branches: [ master ]
