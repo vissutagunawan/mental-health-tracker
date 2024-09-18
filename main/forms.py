@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from master.models import MoodEntry
+from main.models import MoodEntry
 
 class MoodEntryForm(ModelForm):
     class Meta:

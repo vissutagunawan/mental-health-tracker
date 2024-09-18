@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+<div class="login">
+    <h1>Login</h1>
+    <form action="" method="POST">
+        <table>
+            {% csrf_token %}
+            {{form.as_table}}
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn login_btn" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {%endfor%}
+    </ul>
+    {% endif %} Don't have an account yet?
+    <a href="{% url 'main:register' %}">Register Now</a>
+</div>
+
+{% endblock content %}
